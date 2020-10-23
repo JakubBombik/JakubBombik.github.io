@@ -1,22 +1,30 @@
 let video = document.querySelector('.home-video');
 let navigation = document.getElementById("navigation");
-let portfolio = document.querySelectorAll("navigation");
 const burger = document.querySelector(".burger");
+const backgroundBlock = document.querySelector(".background-block");
+let portfolio = document.querySelectorAll("navigation");
+
 
 // Navigation - burger
 burger.addEventListener("click", function(){
-    burger.classList.toggle("active");
+    navigation.classList.toggle("active");
+})
+backgroundBlock.addEventListener("click", function(){
+    navigation.classList.toggle("active");
 })
 
 // Homepage Video
+window.scrollY > 0 ? navigation.classList.add("sticky") : navigation.classList.remove("sticky");
 window.addEventListener('scroll' , function(){
     // change of theme navigation bar
-    navigation.classList.toggle("sticky", window.scrollY > 1);
+    navigation.classList.toggle("sticky", window.scrollY > 0);
     // opacity on homepage
     let value = 1 + window.scrollY/ -600;
     video.style.opacity = value;
     
+    
 })
+
 // 3D cards
 VanillaTilt.init(document.querySelectorAll(".card"), {
     max: 25,
@@ -25,8 +33,6 @@ VanillaTilt.init(document.querySelectorAll(".card"), {
 });
 
 // PROJECT GALLERY
-
-
 $('.project').click(function(){
     $('.backgroun-zoom').toggleClass(('opened'));
     $(this).toggleClass(('opened'));

@@ -85,6 +85,7 @@ a:hover .line4{
     top: 0;
     left: 0;
     width: 100vw;
+    height: 8vh;
     font-size: 2rem;
     display: flex;
     justify-content: space-between;
@@ -101,6 +102,7 @@ a:hover .line4{
     box-shadow: -10px -10px 20px  black;
 }
 #navigation .nav-name{
+    z-index: 1000;
     position: relative;
     font-weight: 500;
     font-size: 2rem;
@@ -110,6 +112,7 @@ a:hover .line4{
     transition: .5s;
 }
 #navigation .nav-name a h1.myname{
+    z-index: 1000;
     font-size: 3rem;
 }
 #navigation .nav-name a h1.myname span{
@@ -117,11 +120,15 @@ a:hover .line4{
     font-weight: 700;
     color: rgb(211, 25, 25);
 }
+#navigation .nav-list{
+    z-index: 999;
+}
 #navigation .nav-list ul{
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    transform-style: preserve-3d;
 }
 #navigation .nav-list ul li{
     position: relative;
@@ -151,13 +158,21 @@ a:hover .line4{
 
     /* Burger */
 #navigation .burger{
+    position: fixed;
     display: none;
+    top: 3vh;
+    right: 0;
+    margin: 1.7rem;
+    width: 30px;
+    height: 30px;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
 }
 #navigation .burger div{
-    width: 2.5rem;
-    height: 3px;
+    width: 25px;
+    height: 4px;
     background-color: #fff;
-    margin: 0.5rem;
+    margin: 4px auto;
     transition: .2s;
 }
 #navigation.sticky .burger div{
@@ -165,53 +180,7 @@ a:hover .line4{
 }
 
 
-@media screen and (max-width: 1200px) {
-    html{
-        font-size: 7.47px;
-    }
-}
-@media screen and (max-width: 900px) {
-    html{
-        font-size: 6.3px;
-    }
-}
-@media screen and (max-width: 768px) {
-    html{
-        font-size: 6px;
-    }
-    #navigation .nav-list ul{
-        position: absolute;
-        display: flex;
-        right: 0;
-        top: 0;
-        height: 92vh;
-        width: 60vw;
-        flex-direction: column;
-        justify-content: space-around;
-        background-color: #fff;
-        
-    }
 
-    #navigation .burger{
-        position: flex;
-    }
-    #navigation .burger.active{
-        width: 3px;
-        height: 3rem;
-    }
-}
-@media screen and (max-width: 600px) {
-    html{
-        font-size: 5px;
-    }
-    
-}
-@media screen and (max-width: 480px) {
-    .content {}
-}
-@media screen and (max-width: 320px) {
-    .content {}
-}
 
 
 
@@ -220,6 +189,7 @@ a:hover .line4{
     position: relative;
     width: 100%;
     height: 100vh;
+    padding-top: 12vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -238,7 +208,7 @@ a:hover .line4{
     position: absolute;
     left: 15%;
     z-index: 2;
-    font-size: 40px;
+    font-size: 4rem;
     text-shadow: 0 0 100px rgba(255, 255, 255, 0.653);
 }
 #home .hello a{
@@ -261,14 +231,14 @@ a:hover .line4{
 
 #aboutme{
     position: relative;
-    padding-top: 40px;
+    padding-top: 8vh;
     height: 100vh;
     width: 100%;
     background-color: #fff;
 }
 #aboutme h4{
-    margin: 40px;
-    font-size: 30px;
+    margin: 3rem 1.5rem;
+    font-size: 2.4rem;
     text-transform: uppercase;
     text-shadow: 0 0 7px #000;
     text-align: center;
@@ -283,15 +253,15 @@ a:hover .line4{
 }
 #aboutme .slide{
     position: relative;
-    background-color: green;
     height: 100%;
     flex: 1;
     border: 2px solid #000;
     overflow: hidden;
+    font-size: 2rem;
     transition: .4s ease-in-out;
 }
 #aboutme .slide:hover{
-    flex-grow: 5;
+    flex-grow: 6;
 }
 #aboutme .education{
     background-image: url("img/education2.jpg");
@@ -313,8 +283,8 @@ a:hover .line4{
 #aboutme .slide .content{
     position: absolute;
     bottom: 0;
-    margin: 30px;
-    padding: 30px;
+    margin: 3rem;
+    padding: 3rem;
     background-color: #000;
     color: #fff;    
     visibility: hidden;
@@ -328,6 +298,84 @@ a:hover .line4{
     transition: .4s;
     transition-delay: .4s;
     transform: translate(0);
+}
+@media screen and (max-width: 1200px) {
+    html{
+        font-size: 7.47px;
+    }
+
+    /* ABOUT ME */
+    #aboutme .aboutme{
+        padding: 0 5%;
+    }
+    #aboutme h4{
+        font-size: 3rem;
+    }
+}
+@media screen and (max-width: 900px) {
+    html{
+        font-size: 6.3px;
+    }
+}
+@media screen and (max-width: 768px) {
+    html{
+        font-size: 6px;
+    }
+    /* NAVIGATION */
+    #navigation .nav-list ul{
+        position: absolute;
+        display: flex;
+        right: 0;
+        top: 4rem;
+        height: 92vh;
+        width: 60vw;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: rgba(0, 0, 0, 0.95);
+    }
+    #navigation .nav-list ul{
+        transform: translateX(100%);
+        transition: .5s;
+        font-size: 4rem;
+    }
+    #navigation.active .nav-list ul{
+        transform: translateX(0);
+    }
+    #navigation.sticky .nav-list ul{
+        background-color: rgba(255, 255, 255, 0.95);
+    }
+
+    #navigation .burger{
+        display: block;
+
+        line-height: 60px;
+
+    }
+    #navigation.active .background-block{
+        /* background blocking when project zooms in */
+        position: fixed;
+        display: block;
+        z-index: 900;
+        left: 0 !important;
+        top: 20px !important;
+        width: 100vw !important;
+        height: 1000px !important;
+    }
+
+}
+@media screen and (max-width: 600px) {
+    html{
+        font-size: 6px;
+    }
+    
+}
+@media screen and (max-width: 480px) {
+    html{
+        font-size: 5.5px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .content {}
 }
 
 /* SKILLS */
@@ -480,6 +528,7 @@ a:hover .line4{
 }
 
 .project.opened{
+    /* background blocking when project zooms in */
     z-index: 3;
     left: 0 !important;
     transform: rotate(0);
