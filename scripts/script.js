@@ -1,6 +1,12 @@
 let video = document.querySelector('.home-video');
-let navigation = document.getElementById("navigation")
-let portfolio = document.querySelectorAll("navigation")
+let navigation = document.getElementById("navigation");
+let portfolio = document.querySelectorAll("navigation");
+const burger = document.querySelector(".burger");
+
+// Navigation - burger
+burger.addEventListener("click", function(){
+    burger.classList.toggle("active");
+})
 
 // Homepage Video
 window.addEventListener('scroll' , function(){

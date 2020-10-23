@@ -92,11 +92,11 @@ a:hover .line4{
     box-shadow: -10px -10px 20px  black;
     box-shadow: none;
     transition: .5s;
-    padding: 4rem 15rem;
+    padding: 4rem 6rem;
 }
 #navigation.sticky{
     /* after scroll down */
-    padding: .5rem 5rem;
+    padding: 2rem 5rem;
     background-color: white;
     box-shadow: -10px -10px 20px  black;
 }
@@ -149,25 +149,62 @@ a:hover .line4{
     box-shadow: 0 0 4px 3px red;
 }
 
+    /* Burger */
+#navigation .burger{
+    display: none;
+}
+#navigation .burger div{
+    width: 2.5rem;
+    height: 3px;
+    background-color: #fff;
+    margin: 0.5rem;
+    transition: .2s;
+}
+#navigation.sticky .burger div{
+    background-color: #000;
+}
+
+
 @media screen and (max-width: 1200px) {
     html{
-        font-size: 7.6px;
+        font-size: 7.47px;
     }
 }
 @media screen and (max-width: 900px) {
     html{
-        font-size: 6.44px;
+        font-size: 6.3px;
     }
 }
 @media screen and (max-width: 768px) {
     html{
         font-size: 6px;
     }
+    #navigation .nav-list ul{
+        position: absolute;
+        display: flex;
+        right: 0;
+        top: 0;
+        height: 92vh;
+        width: 60vw;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: #fff;
+        
+    }
+
+    #navigation .burger{
+        position: flex;
+    }
+    #navigation .burger.active{
+        width: 3px;
+        height: 3rem;
+    }
 }
 @media screen and (max-width: 600px) {
     html{
         font-size: 5px;
     }
+    
 }
 @media screen and (max-width: 480px) {
     .content {}
