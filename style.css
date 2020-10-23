@@ -236,14 +236,6 @@ a:hover .line4{
     width: 100%;
     background-color: #fff;
 }
-#aboutme h4{
-    margin: 3rem 1.5rem;
-    font-size: 2.4rem;
-    text-transform: uppercase;
-    text-shadow: 0 0 7px #000;
-    text-align: center;
-    color: #fff;
-}
 #aboutme .aboutme{
     position: absolute;
     display: flex;
@@ -251,7 +243,15 @@ a:hover .line4{
     width: 100%;
     height: 70%;
 }
-#aboutme .slide{
+#aboutme .aboutme h4{
+    margin: 3rem 1.5rem;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    text-shadow: 0 0 7px #000;
+    text-align: center;
+    color: #fff;
+}
+#aboutme .aboutme .slide{
     position: relative;
     height: 100%;
     flex: 1;
@@ -259,28 +259,23 @@ a:hover .line4{
     overflow: hidden;
     font-size: 2rem;
     transition: .4s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center ;
 }
-#aboutme .slide:hover{
+#aboutme .aboutme .slide:hover{
     flex-grow: 6;
 }
-#aboutme .education{
+#aboutme .aboutme .education{
     background-image: url("img/education2.jpg");
-    background-position: left ;
-    background-size: cover;
-    background-position: center ;
 }
-#aboutme .achievements{
+#aboutme .aboutme .achievements{
     background-image: url("img/achievements.jpg");
-    background-size: cover;
-    background-position: center ;
 }
-#aboutme .hobby{
+#aboutme .aboutme .hobby{
     background-image: url("img/hobby.jpg");
-    background-position: right;
-    background-size: cover;
-    background-position: center ;
 }
-#aboutme .slide .content{
+#aboutme .aboutme .slide .content{
     position: absolute;
     bottom: 0;
     margin: 3rem;
@@ -292,91 +287,14 @@ a:hover .line4{
     transition: .4s;
     transform: translate(100px);
 }
-#aboutme .slide:hover .content{   
+#aboutme .aboutme .slide:hover .content{   
     visibility: visible;
     opacity: 1;
     transition: .4s;
     transition-delay: .4s;
     transform: translate(0);
 }
-@media screen and (max-width: 1200px) {
-    html{
-        font-size: 7.47px;
-    }
 
-    /* ABOUT ME */
-    #aboutme .aboutme{
-        padding: 0 5%;
-    }
-    #aboutme h4{
-        font-size: 3rem;
-    }
-}
-@media screen and (max-width: 900px) {
-    html{
-        font-size: 6.3px;
-    }
-}
-@media screen and (max-width: 768px) {
-    html{
-        font-size: 6px;
-    }
-    /* NAVIGATION */
-    #navigation .nav-list ul{
-        position: absolute;
-        display: flex;
-        right: 0;
-        top: 4rem;
-        height: 92vh;
-        width: 60vw;
-        flex-direction: column;
-        justify-content: space-around;
-        background-color: rgba(0, 0, 0, 0.95);
-    }
-    #navigation .nav-list ul{
-        transform: translateX(100%);
-        transition: .5s;
-        font-size: 4rem;
-    }
-    #navigation.active .nav-list ul{
-        transform: translateX(0);
-    }
-    #navigation.sticky .nav-list ul{
-        background-color: rgba(255, 255, 255, 0.95);
-    }
-
-    #navigation .burger{
-        display: block;
-
-        line-height: 60px;
-
-    }
-    #navigation.active .background-block{
-        /* background blocking when project zooms in */
-        position: fixed;
-        display: block;
-        z-index: 900;
-        left: 0 !important;
-        top: 20px !important;
-        width: 100vw !important;
-        height: 1000px !important;
-    }
-
-}
-@media screen and (max-width: 600px) {
-    html{
-        font-size: 6px;
-    }
-    
-}
-@media screen and (max-width: 480px) {
-    html{
-        font-size: 5.5px;
-    }
-}
-@media screen and (max-width: 320px) {
-    .content {}
-}
 
 /* SKILLS */
 #skills{
@@ -455,6 +373,125 @@ a:hover .line4{
 #skills .skills .skills-list ul i{
     color: rgba(255, 225, 56, 0.781);
     text-shadow: 0 0 27px rgba(0, 0, 0, 0.699);
+}
+@media screen and (max-width: 1200px) {
+    html{
+        font-size: 7.47px;
+    }
+
+    /* ABOUT ME */
+    #aboutme .aboutme{
+        padding: 0 5%;
+    }
+    #aboutme h4{
+        font-size: 3rem;
+    }
+}
+@media screen and (max-width: 900px) {
+    html{
+        font-size: 6.3px;
+    }
+    /* ABOUT ME */
+    #aboutme .aboutme h4{
+        font-size: 3.2rem;
+    }
+    #aboutme .aboutme .slide{
+        font-size: 2.8rem;
+    }
+}
+@media screen and (orientation: landscape){
+    /* ABOUT ME */
+    #aboutme .aboutme{
+        flex-direction: row;
+    }
+    #aboutme .aboutme h4{
+        font-size: 4rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    html{
+        font-size: 6px;
+    }
+    /* NAVIGATION */
+    #navigation .nav-list ul{
+        position: absolute;
+        display: flex;
+        right: 0;
+        top: 4rem;
+        height: 92vh;
+        width: 60vw;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: rgba(0, 0, 0, 0.95);
+    }
+    #navigation .nav-list ul{
+        transform: translateX(100%);
+        transition: .5s;
+        font-size: 4rem;
+    }
+    #navigation.active .nav-list ul{
+        transform: translateX(0);
+    }
+    #navigation.sticky .nav-list ul{
+        background-color: rgba(255, 255, 255, 0.95);
+    }
+
+    #navigation .burger{
+        display: block;
+
+        line-height: 60px;
+
+    }
+    #navigation.active .background-block{
+        /* background blocking when project zooms in */
+        position: fixed;
+        display: block;
+        z-index: 900;
+        left: 0 !important;
+        top: 20px !important;
+        width: 100vw !important;
+        height: 1000px !important;
+    }
+    /* ABOUT ME */
+    #aboutme .aboutme{
+        flex-direction: column;
+    }
+    #aboutme .aboutme h4{
+        font-size: 4rem;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    html{
+        font-size: 6px;
+    }
+    /* ABOUT ME */
+    #aboutme .aboutme .slide{
+        font-size: 2.5rem;
+    }
+    
+}
+@media screen and (max-width: 480px) {
+    html{
+        font-size: 5.5px;
+    }
+    /* ABOUT ME */
+    #aboutme .aboutme .slide{
+        font-size: 2.3rem;
+    }
+}
+@media screen and (max-width: 320px) {
+    /* ABOUT ME */
+    #aboutme .aboutme .slide{
+        font-size: 1.6rem;
+    }
+}
+@media screen and (orientation: landscape){
+    /* ABOUT ME */
+    #aboutme .aboutme{
+        flex-direction: row;
+    }
 }
 
 /* PROJECTS */
