@@ -299,7 +299,7 @@ a:hover .line4{
 /* SKILLS */
 #skills{
     position: relative;
-    padding: 40px;
+    padding: 8vh 2rem;
     height: 100vh;
     width: 100%;
     background-color: #fff;
@@ -310,49 +310,31 @@ a:hover .line4{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 300px;
+    min-height: 30rem;
     flex-wrap: wrap;
     width: 100%;
     transform-style: preserve-3d;
 }
 #skills .skills .card{
     position: relative;
-    width: 320px;
-    height: 400px;
-    margin: 30px;
+    width: 32rem;
+    height: 40rem;
+    margin: 3rem 3rem 4.5rem 3rem;
     box-shadow: 10px 10px 10px ;
-    border-radius: 20px;
+    border-radius: 2rem;
     transform-style: preserve-3d;
     background-image: url("img/blue-steal.jpg");
     caption-side: cover;
     background-position: center;
 }
 
-
-/* #skills .skills .bg-star{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 250px;
-    text-align: center;
-    color: gold;
-    width: 100%;transform-style: preserve-3d;
-    transform: translate3d(-50%,-50%,10px);
-    transition: .2s;
-    opacity: 0;
-    z-index: 10;
-}
-#skills .skills .card:hover .bg-star{
-    font-size: 250px;
-    opacity: 1;
-} */
 #skills .skills .skills-list{
     position: absolute;
     top: 50%;
     left: 50%;
-    font-size: 20px;
+    font-size: 2rem;
     min-width: 92%;
-    max-width: 300px;
+    max-width: 30rem;
     z-index: 11;
     transform-style: preserve-3d;
     transform: translate3d(-50%, -50%, 50px);
@@ -360,12 +342,12 @@ a:hover .line4{
 
 #skills .skills .skills-list .programing-languages{
     text-align: right;
-    line-height: 50px;
+    line-height: 5rem;
     font-weight: bolder;
 }
 #skills .skills .skills-list ul{
     text-align: center;
-    line-height: 50px;
+    line-height: 5rem;
     font-weight: bolder;
     color: #fff;
     text-shadow: 0 0 15px rgb(36, 36, 36);
@@ -373,125 +355,6 @@ a:hover .line4{
 #skills .skills .skills-list ul i{
     color: rgba(255, 225, 56, 0.781);
     text-shadow: 0 0 27px rgba(0, 0, 0, 0.699);
-}
-@media screen and (max-width: 1200px) {
-    html{
-        font-size: 7.47px;
-    }
-
-    /* ABOUT ME */
-    #aboutme .aboutme{
-        padding: 0 5%;
-    }
-    #aboutme h4{
-        font-size: 3rem;
-    }
-}
-@media screen and (max-width: 900px) {
-    html{
-        font-size: 6.3px;
-    }
-    /* ABOUT ME */
-    #aboutme .aboutme h4{
-        font-size: 3.2rem;
-    }
-    #aboutme .aboutme .slide{
-        font-size: 2.8rem;
-    }
-}
-@media screen and (orientation: landscape){
-    /* ABOUT ME */
-    #aboutme .aboutme{
-        flex-direction: row;
-    }
-    #aboutme .aboutme h4{
-        font-size: 4rem;
-    }
-}
-@media screen and (max-width: 768px) {
-    html{
-        font-size: 6px;
-    }
-    /* NAVIGATION */
-    #navigation .nav-list ul{
-        position: absolute;
-        display: flex;
-        right: 0;
-        top: 4rem;
-        height: 92vh;
-        width: 60vw;
-        flex-direction: column;
-        justify-content: space-around;
-        background-color: rgba(0, 0, 0, 0.95);
-    }
-    #navigation .nav-list ul{
-        transform: translateX(100%);
-        transition: .5s;
-        font-size: 4rem;
-    }
-    #navigation.active .nav-list ul{
-        transform: translateX(0);
-    }
-    #navigation.sticky .nav-list ul{
-        background-color: rgba(255, 255, 255, 0.95);
-    }
-
-    #navigation .burger{
-        display: block;
-
-        line-height: 60px;
-
-    }
-    #navigation.active .background-block{
-        /* background blocking when project zooms in */
-        position: fixed;
-        display: block;
-        z-index: 900;
-        left: 0 !important;
-        top: 20px !important;
-        width: 100vw !important;
-        height: 1000px !important;
-    }
-    /* ABOUT ME */
-    #aboutme .aboutme{
-        flex-direction: column;
-    }
-    #aboutme .aboutme h4{
-        font-size: 4rem;
-    }
-
-}
-
-@media screen and (max-width: 600px) {
-    html{
-        font-size: 6px;
-    }
-    /* ABOUT ME */
-    #aboutme .aboutme .slide{
-        font-size: 2.5rem;
-    }
-    
-}
-@media screen and (max-width: 480px) {
-    html{
-        font-size: 5.5px;
-    }
-    /* ABOUT ME */
-    #aboutme .aboutme .slide{
-        font-size: 2.3rem;
-    }
-}
-@media screen and (max-width: 320px) {
-    /* ABOUT ME */
-    #aboutme .aboutme .slide{
-        font-size: 1.6rem;
-    }
-}
-@media screen and (orientation: landscape){
-    /* ABOUT ME */
-    #aboutme .aboutme{
-        flex-direction: row;
-    }
 }
 
 /* PROJECTS */
@@ -637,6 +500,127 @@ a:hover .line4{
     margin-right: 0;
 }
 
+@media screen and (max-width: 1200px) {
+    html{
+        font-size: 7.47px;
+    }
+
+    /* ABOUT ME */
+    #aboutme .aboutme{
+        padding: 0 5%;
+    }
+    #aboutme h4{
+        font-size: 3rem;
+    }
+}
+@media screen and (max-width: 900px) {
+    html{
+        font-size: 6.3px;
+    }
+    /* ABOUT ME */
+    #aboutme .aboutme h4{
+        font-size: 3.2rem;
+    }
+    #aboutme .aboutme .slide{
+        font-size: 2.8rem;
+    }
+}
+@media screen and (orientation: landscape){
+    /* ABOUT ME */
+    #aboutme .aboutme{
+        flex-direction: row;
+    }
+    #aboutme .aboutme h4{
+        font-size: 4rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    html{
+        font-size: 6px;
+    }
+    /* NAVIGATION */
+    #navigation .nav-list ul{
+        position: absolute;
+        display: flex;
+        right: 0;
+        top: 4rem;
+        height: 92vh;
+        width: 60vw;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: rgba(0, 0, 0, 0.95);
+    }
+    #navigation .nav-list ul{
+        transform: translateX(100%);
+        transition: .5s;
+        font-size: 4rem;
+    }
+    #navigation.active .nav-list ul{
+        transform: translateX(0);
+    }
+    #navigation.sticky .nav-list ul{
+        background-color: rgba(255, 255, 255, 0.95);
+    }
+
+    #navigation .burger{
+        display: block;
+
+        line-height: 60px;
+
+    }
+    #navigation.active .background-block{
+        /* background blocking when project zooms in */
+        position: fixed;
+        display: block;
+        z-index: 900;
+        left: 0 !important;
+        top: 20px !important;
+        width: 100vw !important;
+        height: 1000px !important;
+    }
+    /* ABOUT ME */
+    #aboutme .aboutme{
+        flex-direction: column;
+    }
+    #aboutme .aboutme h4{
+        font-size: 4rem;
+    }
+    /* SKILLS */
+    #skills{
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    html{
+        font-size: 6px;
+    }
+    /* ABOUT ME */
+    #aboutme .aboutme .slide{
+        font-size: 2.5rem;
+    }
+}
+@media screen and (max-width: 480px) {
+    html{
+        font-size: 5.5px;
+    }
+    /* ABOUT ME */
+    #aboutme .aboutme .slide{
+        font-size: 2.3rem;
+    }
+}
+@media screen and (max-width: 320px) {
+    /* ABOUT ME */
+    #aboutme .aboutme .slide{
+        font-size: 1.6rem;
+    }
+}
+@media screen and (orientation: landscape){
+    /* ABOUT ME */
+    #aboutme .aboutme{
+        flex-direction: row;
+    }
+}
 
 
 
