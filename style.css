@@ -378,20 +378,21 @@ a:hover .line4{
     animation: comein 1.5s ease-in-out;
 }
 #projects .allcontent .backgroun-zoom.opened{
+    /* background blocking when project zooms in */
     position: absolute;
-    top: -1000px;
-    left: -3000px;
+    top: -100%;
+    left: -100%;
     width: 1000%;
     height: 1000%;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.5);
     z-index: 2;
 }
 #projects .allcontent .project{
-    width: 80%;
-    max-width: 1000px;
     position: absolute;
     right: 0;
     top: 0;
+    width: fit-content;
+    height: fit-content;
     transition: .2s;
     cursor: pointer;
     box-shadow: -2px 0 3px rgba(0, 0, 0, 0.3)
@@ -424,83 +425,27 @@ a:hover .line4{
     left: 25%;
     transform: rotate(-1deg);
 }
-#projects .project-video{
-    width: 100%;
+#projects .project .project-video{
+    height: 30vh;
     border: 2px solid #fff;
 }
 
-.project.opened{
-    /* background blocking when project zooms in */
-    z-index: 3;
-    left: 0 !important;
+#projects .project.opened{
+    z-index: 4;
+    left: 0;
     transform: rotate(0);
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-    width: 100vw !important;
 }
-.project.opened .project-video{
+#projects .project.opened .project-video{
+    /* transform: translate(-50%, -50%); */
+    top: 0 !important;
+    left: 0 !important;
     z-index: 5;
-}
-#projects .allcontent .project .ombra{
-    position: absolute;
-    bottom: 20px;
-    left: 10px;
-    width: 100%;
-    height: 20px;
-    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
-    transform: rotate(-1deg);
-    display: none;
-    z-index: -1;
-}
-#projects .allcontent .project .ombra:after{
-    display: block;
-    content: "";
-    position: absolute;
-    bottom: -8px;
-    right: -93px;
-    width: 90%;
-    height: 20px;
-    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
-    transform: rotate(7deg);
-}
-#projects .allcontent #navi{
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    margin:  0 0 0 -62px;
-    background: #000;
-    opacity: 0.8;
-    color: #fff;
-    height: 24px;
-    border-radius: 20px;
-    padding: 0 10px;
+    width: 100vw;
+    height: 100vh;
 }
 
-.circle{
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    border-radius: 10px;
-    background: #efefef;
-    border: 1px solid #000;
-    margin-right: 6px;
-    cursor: pointer;
-}
-.circle:hover{
-    background-color: #fff;
-    border: 1px solid #ccc;
-}
-.circle:active,
-.activenav,
-.activenav:hover{
-    background: #666;
-    border: 1px solid #333;
-}
-.activenav{
-    cursor: default;
-}
-.circle:last-child{
-    margin-right: 0;
-}
+
 
 @media screen and (max-width: 1200px) {
     html{
@@ -590,6 +535,36 @@ a:hover .line4{
     /* SKILLS */
     #skills{
         height: auto;
+    }
+    /* PROJECTS */
+    #projects .allcontent .project:nth-child(1){
+        left: 0;
+    }
+    #projects .allcontent .project:nth-child(1):hover{
+        left: 0%;
+        transform: rotate(0);
+    }
+    #projects .allcontent .project:nth-child(2){
+        top: 15%;
+        left: 5%;
+    }
+    #projects .allcontent .project:nth-child(2):hover{
+        left: 0%;
+        transform: rotate(0);
+    }
+    #projects .allcontent .project:nth-child(3){
+        top: 30%;
+    }
+    #projects .allcontent .project:nth-child(3):hover{
+        left: 0%;
+        transform: rotate(0);
+    }
+    #projects .allcontent .project:nth-child(4){
+        top: 45%;
+    }
+    #projects .allcontent .project:nth-child(4):hover{
+        left: 0%;
+        transform: rotate(0);
     }
 }
 
