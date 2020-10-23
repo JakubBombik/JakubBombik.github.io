@@ -11,7 +11,7 @@ a {
 }
 html {
     letter-spacing: 1.3px;
-	font-size: 20px;
+	font-size: 10px;
     font-family: 'Orbitron', sans-serif;
 }
 body{
@@ -19,11 +19,11 @@ body{
     color: rgb(255, 255, 255);
 }
 h3{
-    margin: 40px;
-    font-size: 25px;
+    margin: 4rem;
+    font-size: 2.5rem;
     font-weight: 500;
-    letter-spacing: 10px;
-    word-spacing: 20px;
+    letter-spacing: 1rem;
+    word-spacing: 2rem;
     text-transform: uppercase;
     text-align: center;
     color: rgb(0, 0, 0);
@@ -85,31 +85,35 @@ a:hover .line4{
     top: 0;
     left: 0;
     width: 100vw;
+    font-size: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: -10px -10px 20px  black;
     box-shadow: none;
     transition: .5s;
-    padding: 40px 150px;
+    padding: 4rem 15rem;
 }
 #navigation.sticky{
     /* after scroll down */
-    padding: 5px 100px;
+    padding: .5rem 5rem;
     background-color: white;
     box-shadow: -10px -10px 20px  black;
 }
 #navigation .nav-name{
     position: relative;
     font-weight: 500;
-    font-size: 21px;
-    word-spacing: 5px;
-    letter-spacing: -2px;
+    font-size: 2rem;
+    word-spacing: .5rem;
+    letter-spacing: -0.2rem;
     text-transform: uppercase;
     transition: .5s;
 }
-#navigation .nav-name a span{
-    font-size: 1.2em;
+#navigation .nav-name a h1.myname{
+    font-size: 3rem;
+}
+#navigation .nav-name a h1.myname span{
+    font-size: 3.1rem;
     font-weight: 700;
     color: rgb(211, 25, 25);
 }
@@ -125,11 +129,11 @@ a:hover .line4{
 }
 #navigation .nav-list ul li a{
     position: relative;
-    margin: 0 15px;
+    margin: 0 1.3rem;
     text-transform: uppercase;
     display: block;
     position: relative;
-    padding: 2px 12px;
+    padding: .2rem 1.2rem;
     border-style: none;
     overflow: hidden;
     cursor: pointer;
@@ -144,8 +148,33 @@ a:hover .line4{
 #navigation.sticky a:hover .line{
     box-shadow: 0 0 4px 3px red;
 }
-/* 
-@media (max-width:) */
+
+@media screen and (max-width: 1200px) {
+    html{
+        font-size: 7.6px;
+    }
+}
+@media screen and (max-width: 900px) {
+    html{
+        font-size: 6.44px;
+    }
+}
+@media screen and (max-width: 768px) {
+    html{
+        font-size: 6px;
+    }
+}
+@media screen and (max-width: 600px) {
+    html{
+        font-size: 5px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .content {}
+}
+@media screen and (max-width: 320px) {
+    .content {}
+}
 
 
 
