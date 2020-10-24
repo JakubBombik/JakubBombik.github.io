@@ -34,8 +34,14 @@ VanillaTilt.init(document.querySelectorAll(".card"), {
 
 // PROJECT GALLERY
 $('.project').click(function(){
-    $('.backgroun-zoom').toggleClass(('opened'));
     $(this).toggleClass(('opened'));
+    $(this).toggleClass(('closed'));
+    $('.backgroun-zoom').toggleClass(('opened'));
+});
+$('.backgroun-zoom').click(function(){
+    $('.project').removeClass(('opened'));
+    $('.project').addClass(('closed'));
+    $('.backgroun-zoom').removeClass(('opened'));
 });
 
 
