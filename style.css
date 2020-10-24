@@ -19,7 +19,7 @@ body{
     color: rgb(255, 255, 255);
 }
 h3{
-    margin: 4rem;
+    margin: 3rem;
     font-size: 2.5rem;
     font-weight: 500;
     letter-spacing: 1rem;
@@ -438,7 +438,6 @@ a:hover .line4{
     left: 50%;
     width: 100%;
     transform: rotate(0) translate(-50%, -50%);
-    background-color: red;
     box-shadow: 0 0 7px 3px rgba(255, 255, 255, 0.719);
 }
 #projects .project.opened .project-video{
@@ -448,7 +447,203 @@ a:hover .line4{
     width: 100%;
 }
 
+/* CONTACT */
+#contact{
+    position: relative;
+    padding: 40px 100px;
+    height: 90vh;
+    width: 100%;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    color: #000;
+}
+#contact .contact{
+    position: relative;
+    margin: auto;
+    width: 110rem;
+    height: 55rem;
+    display: flex;
+}
+#contact .contact .contactinfo{
+    position: relative;
+    top: 4rem;
+    width: 40rem;
+    height: fit-content;
+    height: calc(100%-80px);
+    background-color: rgba(58, 58, 58, 0.767);
+    z-index: 1;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+}
+#contact .contact .contactinfo h4{
+    color: #fff;
+    font-size: 2.4rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
+#contact .contact .contactinfo .info{
+    position: relative;
+    margin: 2rem 0;
+}
+#contact .contact .contactinfo .info li{
+    font-size: 1.5rem;
+    position: relative;
+    display: flex;
+    margin: 2rem 0;
+    align-items: flex-start;
+    cursor: pointer;
+}
+#contact .contact .contactinfo .info li span:nth-child(1){
+    width: 4rem;
+    margin-right: 2rem;
+    min-width: 4rem;
+    transform: translate(0, -15%);
+}
+#contact .contact .contactinfo .info li span:nth-child(1) img{
+    max-width: 100%;
+    filter: invert(1);
+    opacity: 0.5;
+}   
+#contact .contact .contactinfo .info li span:nth-child(2){
+    color: #fff;
+    margin-left: 1rem;
+    font-weight: 40rem;
+    opacity: 0.5;
+}
+#contact .contact .contactinfo .info li:hover span:nth-child(1) img,
+#contact .contact .contactinfo .info li:hover span:nth-child(2){
+    opacity: 1;
+}   
+#contact .contact .contactinfo .icons{
+    margin: 4rem auto;
+    width: 25rem;
+    position: relative;
+    display: block;    
+}
+#contact .contact .contactinfo .icons ul{
+    position: relative;
+    display: flex;
+    height: 3rem;
+    justify-content: space-around;
+    align-items: center;
+}
+#contact .contact .contactinfo .icons ul li{
+    position: relative;
+    width: 3rem;
+    min-width: 3rem;
+}
+#contact .contact .contactinfo .icons ul li a{
+    position: relative;
+}
+#contact .contact .contactinfo .icons ul li img{
+    max-width: 100%;
+    margin: 1%;
+    transition: .2s;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.582)) invert(0%);
+}
+#contact .contact .contactinfo .icons ul li:hover img{
+    transform: translate(-10%, 3%);
+    max-width: 130%;
+    margin: 0;
+} 
+#contact .contact .contact-message{
+    position: absolute;
+    padding: 7rem 5rem;
+    margin-left: 15rem;
+    padding-left: 27rem;
+    width: calc(100% - 15rem);
+    height: 100%;
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5);
+    background-color: rgba(223, 223, 223, 0.486);
+}
+#contact .contact .contact-message h4{
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+#contact .contact .contact-message .message-box{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+}
+#contact .contact .contact-message .message-box .input{
+    position: relative;
+    margin-bottom: 3.5rem;
+}
+#contact .contact .contact-message .message-box .w50{
+    width: 47%;
+}
+#contact .contact .contact-message .message-box .w100{
+    width: 100%;
+}
+#contact .contact .contact-message .message-box input,
+#contact .contact .contact-message .message-box textarea{
+    width: 100% !important;
+    padding: 5px 0;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #333;
+    resize: none;
+    border: none;
+    border-bottom: 1px solid #777;
+    outline: none;
+    background-color: transparent;
+}
+#contact .contact .contact-message .message-box textarea{
+    min-height: 12rem;
+}
+#contact .contact .contact-message .message-box span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #333;
+    transition: .4s;
+    pointer-events: none;
+}
+#contact .contact .contact-message .message-box input:focus ~ span,
+#contact .contact .contact-message .message-box textarea:focus ~ span,
+#contact .contact .contact-message .message-box input:valid ~ span,
+#contact .contact .contact-message .message-box textarea:valid ~ span{
+    transform: translateY(-2rem);
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: rgb(255, 0, 0);
+}
+#contact .contact .contact-message .message-box .send{
+    position: relative;
+    cursor: pointer;
+    background-color: rgb(197, 88, 88);
+    color: #fff;
+    border: none;
+    max-width: 15rem;
+    padding: 1.2rem 3rem;
+}
+#contact .contact .contact-message .message-box .input:hover .send{
+    background-color: rgb(182, 61, 61);
+    color: #fff;
+}
 
+/* FOOTER */
+footer{
+    position: relative;
+    height: 30px;
+}
+footer p{
+    display: block;
+    width:fit-content ;
+    line-height: 30px;
+    margin: auto;
+    font-size: 15px;
+}
 
 @media screen and (max-width: 1200px) {
     html{
@@ -539,31 +734,64 @@ a:hover .line4{
     #skills{
         height: auto;
     }
-    /* PROJECTS */
-    #projects .allcontent .project:nth-child(1){
+
+
+    /* CONTACT */
+    #contact{
+        height: fit-content;
+        padding: 40px 4rem;
+    }
+    #contact .contact{
+        width: 100%;
+        height: fit-content;
+        flex-direction: column;
+    }
+    #contact .contact .contactinfo{
         left: 0;
+        top: 0;
+        width: 100%;
+        height: fit-content;
+        height: calc(100%-80px);
+        padding: 4vw;
+        z-index: 0;
     }
-    #projects .allcontent .project.closed:nth-child(1):hover{
-        transform: rotate(0);
+    #contact .contact .contactinfo h4{
+        font-size: 3.4rem;
+        margin-bottom: 3rem;
     }
-    #projects .allcontent .project:nth-child(2){
-        top: 15%;
-        left: 5%;
+    #contact .contact .contactinfo .info li{
+        font-size: 2.5rem;
+        margin: 2rem 0;
     }
-    #projects .allcontent .project.closed:nth-child(2):hover{
-        transform: rotate(0);
+    #contact .contact .contactinfo .info li span:nth-child(1) img{
+        margin-top: .7rem;
+    }   
+    #contact .contact .contactinfo .icons{
+        margin-top: 5%;
+        width: 60%;       
     }
-    #projects .allcontent .project:nth-child(3){
-        top: 30%;
+    #contact .contact .contactinfo .icons ul li{
+        width: 5rem;
+        margin-top: 10%;
     }
-    #projects .allcontent .project.closed:nth-child(3):hover{
-        transform: rotate(0);
+    #contact .contact .contact-message{
+        position: relative;
+        top: 2rem;
+        display: block;
+        height: fit-content;
+        padding: 2rem 4vw;
+        margin-left: 0;
+        margin-top: auto;
+        width: 100%;
+        box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5);
+        background-color: rgba(223, 223, 223, 0.486);
     }
-    #projects .allcontent .project:nth-child(4){
-        top: 45%;
+    #contact .contact .contact-message h4{
+        font-size: 3.4rem;
     }
-    #projects .allcontent .project.closed:nth-child(4):hover{
-        transform: rotate(0);
+    #contact .contact .contact-message .message-box input,
+    #contact .contact .contact-message .message-box textarea{
+    font-size: 2.5rem;
     }
 }
 
@@ -575,6 +803,7 @@ a:hover .line4{
     #aboutme .aboutme .slide{
         font-size: 2.5rem;
     }
+    
 }
 @media screen and (max-width: 480px) {
     html{
@@ -584,11 +813,29 @@ a:hover .line4{
     #aboutme .aboutme .slide{
         font-size: 2.3rem;
     }
+    /* CONTACT */
+    #contact .contact .contactinfo .info li{
+        font-size: 3.6vw;
+    }
+    #contact .contact .contactinfo .icons{
+        width: 80%;       
+    }
+    #contact .contact .contact-message .message-box input,
+    #contact .contact .contact-message .message-box textarea{
+        font-size: 3.6vw;
+    }
 }
 @media screen and (max-width: 320px) {
     /* ABOUT ME */
     #aboutme .aboutme .slide{
         font-size: 1.6rem;
+    }
+    /* CONTACT */
+    #contact .contact .contactinfo .info li{
+        font-size: 3.2vw;
+    }
+    #contact .contact .contactinfo .icons{
+        width: 90%;       
     }
 }
 @media screen and (orientation: landscape){
@@ -596,205 +843,120 @@ a:hover .line4{
     #aboutme .aboutme{
         flex-direction: row;
     }
-}
 
+    /* PROJECTS */
+    #projects{
+        padding-top: 7vh;
+        width: 100%;
+        height: fit-content;
+        overflow: hidden;
+        position: relative;
+        background-color: #fff;
+    }
+    #projects .allcontent{
+        position: relative;
+        margin: 6rem auto;
+        width: 100%;
+        max-width: 80vw;
+        height: fit-content;
+        animation: comein 1.5s ease-in-out;
+    }
+    #projects .allcontent .backgroun-zoom.opened{
+        /* background blocking when project zooms in */
+        position: absolute;
+        top: -100%;
+        left: -100%;
+        width: 1000%;
+        height: 1000%;
+        background-color: rgba(255, 255, 255, 0.144);
+        z-index: 2;
+    }
+    #projects .allcontent .project{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: fit-content;
+        height: fit-content;
+        transition: .2s;
+        cursor: pointer;
+        box-shadow: -2px 0 3px rgba(0, 0, 0, 0.3)
+    }
+    #projects .allcontent .project.closed:nth-child(1){
+        left: 10px;
+    }
+    #projects .allcontent .project.closed:nth-child(1):hover{
+        left: 0;
+        transform: rotate(-1deg);
+    }
+    #projects .allcontent .project.closed:nth-child(2){
+        left: 10%;
+    }
+    #projects .allcontent .project.closed:nth-child(2):hover{
+        left: 5%;
+        transform: rotate(-1deg);
+    }
+    #projects .allcontent .project.closed:nth-child(3){
+        left: 20%;
+    }
+    #projects .allcontent .project.closed:nth-child(3):hover{
+        left: 15%;
+        transform: rotate(-1deg);
+    }
+    #projects .allcontent .project.closed:nth-child(4){
+        left: 30%;
+    }
+    #projects .allcontent .project.closed:nth-child(4):hover{
+        left: 25%;
+        transform: rotate(-1deg);
+    }
+    #projects .project .project-video{
+        height: 60vh;
+        width: 55vw;
+        border: 2px solid #fff;
+    }
+    #projects .project.opened{
+        position: absolute;
+        z-index: 4;
+        top: 0%;
+        left: 50%;
+        height: 60vh;
+        width: 100%;
+        transform: rotate(0) translate(-50%, -50%);
+        box-shadow: 0 0 7px 3px rgba(255, 255, 255, 0.719);
+    }
+    #projects .project.opened .project-video{
+        /* transform: translate(-50%, -50%); */
+        position: absolute;
+        z-index: 5;
+        width: 100%;
+    }
 
-
-/* CONTACT */
-#contact{
-    position: relative;
-    padding: 40px 100px;
-    height: 90vh;
-    width: 100%;
-    overflow: hidden;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    color: #000;
 }
-#contact .contact{
-    position: relative;
-    width: 1100px;
-    height: 550px;
-    max-width: 80vw;
-    display: flex;
-}
-#contact .contact .contactinfo{
-    position: relative;
-    top: 40px;
-    width: 400px;
-    height: 370px;
-    height: calc(100%-80px);
-    background-color: rgba(58, 58, 58, 0.767);
-    z-index: 1;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
-}
-#contact .contact .contactinfo h4{
-    color: #fff;
-    font-size: 24px;
-    font-weight: 500;
-    margin-bottom: 30px;
-}
-#contact .contact .contactinfo .info{
-    position: relative;
-    margin: 20px 0;
-}
-#contact .contact .contactinfo .info li{
-    position: relative;
-    display: flex;
-    margin: 20px 0;
-    align-items: flex-start;
-    cursor: pointer;
-}
-#contact .contact .contactinfo .info li span:nth-child(1){
-    width: 40px;
-    min-width: 40px;
-    transform: translate(0, -15%);
-}
-#contact .contact .contactinfo .info li span:nth-child(1) img{
-    max-width: 100%;
-    filter: invert(1);
-    opacity: 0.5;
-}   
-#contact .contact .contactinfo .info li span:nth-child(2){
-    color: #fff;
-    margin-left: 10px;
-    font-weight: 400px;
-    opacity: 0.5;
-}
-#contact .contact .contactinfo .info li:hover span:nth-child(1) img,
-#contact .contact .contactinfo .info li:hover span:nth-child(2){
-    opacity: 1;
-}   
-#contact .contact .contactinfo .icons{
-    height: 180px;
-    width: 250px;
-    position: relative;
-    display: block;
-    transform: translate(-50%, 0);
-    left: 50%;
-    
-}
-#contact .contact .contactinfo .icons ul{
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-}
-#contact .contact .contactinfo .icons ul li{
-    position: relative;
-    width: 30px;
-    min-width: 30px;
-    transform: translate(-50%, 0);
-    
-}
-#contact .contact .contactinfo .icons ul li a{
-    position: relative;
-}
-#contact .contact .contactinfo .icons ul li img{
-    max-width: 100%;
-    margin: 15%;
-    transition: .2s;
-}
-#contact .contact .contactinfo .icons ul li:hover img{
-    max-width: 130%;
-    margin: 0;
-} 
-#contact .contact .contact-message{
-    position: absolute;
-    padding: 70px 50px;
-    margin-left: 150px;
-    padding-left: 270px;
-    width: calc(100% - 150px);
-    height: 100%;
-    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5);
-    background-color: rgba(223, 223, 223, 0.486);
-}
-#contact .contact .contact-message h4{
-    font-size: 24px;
-    font-weight: 600;
-}
-#contact .contact .contact-message .message-box{
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding-top: 20px;
-}
-#contact .contact .contact-message .message-box .input{
-    position: relative;
-    margin-bottom: 35px;
-}
-#contact .contact .contact-message .message-box .w50{
-    width: 47%;
-}
-#contact .contact .contact-message .message-box .w100{
-    width: 100%;
-}
-#contact .contact .contact-message .message-box input,
-#contact .contact .contact-message .message-box textarea{
-    width: 100% !important;
-    padding: 5px 0;
-    font-size: 18px;
-    font-weight: 300;
-    color: #333;
-    resize: none;
-    border: none;
-    border-bottom: 1px solid #777;
-    outline: none;
-    background-color: transparent;
-}
-#contact .contact .contact-message .message-box textarea{
-    min-height: 120px;
-}
-#contact .contact .contact-message .message-box span{
-    position: absolute;
-    left: 0;
-    padding: 5px 0;
-    font-size: 18px;
-    font-weight: 300;
-    color: #333;
-    transition: .4s;
-    pointer-events: none;
-}
-#contact .contact .contact-message .message-box input:focus ~ span,
-#contact .contact .contact-message .message-box textarea:focus ~ span,
-#contact .contact .contact-message .message-box input:valid ~ span,
-#contact .contact .contact-message .message-box textarea:valid ~ span{
-    transform: translateY(-20px);
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 1px;
-    color: rgb(255, 0, 0);
-}
-#contact .contact .contact-message .message-box .send{
-    position: relative;
-    cursor: pointer;
-    background-color: rgb(197, 88, 88);
-    color: #fff;
-    border: none;
-    max-width: 150px;
-    padding: 12px 30px;
-}
-#contact .contact .contact-message .message-box .input:hover .send{
-    background-color: rgb(182, 61, 61);
-    color: #fff;
-}
-
-/* FOOTER */
-footer{
-    position: relative;
-    height: 30px;
-}
-footer p{
-    display: block;
-    width:fit-content ;
-    line-height: 30px;
-    margin: auto;
-    font-size: 15px;
+@media screen and (max-width: 768px) and (orientation: portrait){
+        /* PROJECTS */
+        #projects .allcontent .project:nth-child(1){
+            left: 0;
+        }
+        #projects .allcontent .project.closed:nth-child(1):hover{
+            transform: rotate(0);
+        }
+        #projects .allcontent .project:nth-child(2){
+            top: 15%;
+            left: 5%;
+        }
+        #projects .allcontent .project.closed:nth-child(2):hover{
+            transform: rotate(0);
+        }
+        #projects .allcontent .project:nth-child(3){
+            top: 30%;
+        }
+        #projects .allcontent .project.closed:nth-child(3):hover{
+            transform: rotate(0);
+        }
+        #projects .allcontent .project:nth-child(4){
+            top: 45%;
+        }
+        #projects .allcontent .project.closed:nth-child(4):hover{
+            transform: rotate(0);
+        }
 }
