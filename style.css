@@ -378,6 +378,9 @@ a:hover .line4{
     animation: comein 1.5s ease-in-out;
     box-sizing: content-box;
 }
+#projects .allcontent .maincontent {
+    position: relative;
+}
 #projects .allcontent .backgroun-zoom.opened{
     /* background blocking when project zooms in */
     position: absolute;
@@ -388,16 +391,7 @@ a:hover .line4{
     background-color: rgba(255, 255, 255, 0.144);
     z-index: 2;
 }
-#projects .allcontent .project{
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: fit-content;
-    height: fit-content;
-    transition: .2s;
-    cursor: pointer;
-    box-shadow: -2px 0 3px rgba(0, 0, 0, 0.3)
-}
+
 #projects .allcontent .project.closed:nth-child(1){
     left: 10px;
 }
@@ -426,24 +420,34 @@ a:hover .line4{
     left: 25%;
     transform: rotate(-1deg);
 }
-#projects .project .project-video{
-    width: 55vw;
-    border: 2px solid #fff;
-}
 
 
-#projects .project.opened{
+#projects .allcontent .project{
     position: absolute;
-    z-index: 4;
+    right: 0;
+    top: 0;
+    width: 55vw;
+    height: auto;
+    transition: .2s;
+    cursor: pointer;
+    box-shadow: -2px 0 3px rgba(0, 0, 0, 0.3)
+}
+#projects .allcontent .project.opened{
+    position: absolute;
+    z-index: 5;
     top: 0%;
-    left: 50%;
-    width: 100%;
+    width: 60vw;
+    height: auto;
+    box-sizing: content-box;
     transform: rotate(0) translate(0%, -50%);
     box-shadow: 0 0 7px 3px rgba(255, 255, 255, 0.719);
 }
-#projects .project.opened .project-video{
-    transform: translate(-50%, -50%) !important;
-    position: absolute;
+#projects .allcontent .project .project-video{
+    width: 100%;
+    border: 2px solid #fff;
+}
+#projects .allcontent .project.opened .project-video{
+    /* transform: translate(-50%, -50%) !important; */
     z-index: 5;
     width: 100%;
 }
@@ -636,14 +640,14 @@ a:hover .line4{
 /* FOOTER */
 footer{
     position: relative;
-    height: 30px;
+    height: fit-content;
 }
 footer p{
     display: block;
     width:fit-content ;
-    line-height: 30px;
+    line-height: 3rem;
     margin: auto;
-    font-size: 15px;
+    font-size: 1.5rem;
 }
 
 @media screen and (max-width: 1200px) {
@@ -669,15 +673,6 @@ footer p{
     }
     #aboutme .aboutme .slide{
         font-size: 2.8rem;
-    }
-}
-@media screen and (orientation: landscape){
-    /* ABOUT ME */
-    #aboutme .aboutme{
-        flex-direction: row;
-    }
-    #aboutme .aboutme h4{
-        font-size: 4rem;
     }
 }
 @media screen and (max-width: 768px) {
@@ -844,6 +839,9 @@ footer p{
     #aboutme .aboutme{
         flex-direction: row;
     }
+    #aboutme .aboutme h4{
+        font-size: 4rem;
+    }
 
     /* PROJECTS */
     #projects{
@@ -872,16 +870,7 @@ footer p{
         background-color: rgba(255, 255, 255, 0.144);
         z-index: 2;
     }
-    #projects .allcontent .project{
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: fit-content;
-        height: 70%;
-        transition: .2s;
-        cursor: pointer;
-        box-shadow: -2px 0 3px rgba(0, 0, 0, 0.3)
-    }
+
     #projects .allcontent .project.closed:nth-child(1){
         left: 10px;
     }
@@ -910,35 +899,42 @@ footer p{
         left: 25%;
         transform: rotate(-1deg);
     }
-    #projects .project .project-video{
-        height: 100%;
-        width: auto;
-        border: 2px solid #fff;
+
+    #projects .allcontent .project{
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 70%;
+        width: fit-content;
+        transition: .2s;
+        cursor: pointer;
+        box-shadow: -2px 0 3px rgba(0, 0, 0, 0.3)
     }
     #projects .allcontent .project.opened{
         position: absolute;
         z-index: 4;
         top: -3%;
-        left: 10%;
+        height: 75%;
         width: fit-content;
-        height: 70%;
+        left: 10%;
         transform: rotate(0) translate(0%, 0%);
         box-shadow: 0 0 7px 3px rgba(255, 255, 255, 0.719);
     }
-    #projects .project.opened .project-video{
-        transform: translate(0%, 0%);
-        position: absolute;
-        z-index: 5;
+    #projects .allcontent .project .project-video{
         width: auto;
-        height: 110%;
+        height: 100%;
+        border: 2px solid #fff;
+    }
+    #projects .allcontent .project.opened .project-video{
+        width: auto;
+        height: 100%;
+        transform: translate(0%, 0%);
+        z-index: 5;
     }
 
 }
 @media screen and (max-width: 768px) and (orientation: portrait){
         /* PROJECTS */
-        #projects .allcontent .project:nth-child(1){
-
-        }
         #projects .allcontent .project.closed:nth-child(1):hover{
             transform: rotate(0);
         }
@@ -960,21 +956,24 @@ footer p{
         #projects .allcontent .project.closed:nth-child(4):hover{
             transform: rotate(0);
         }
+        #projects{
+            height: fit-content;
+        }
+        #projects .allcontent{
+            height: 100vw;
+        }
         #projects .project.opened{
             position: absolute;
-            z-index: 4;
+            z-index: 5;
             top: 50% !important;
             left: 50% !important;
-            width: 100%;
-            height: fit-content;
-            transform: rotate(0) translate(0%, -50%);
+            box-sizing: content-box;
+            transform: rotate(0) translate(-50%, -50%) !important;
             box-shadow: 0 0 7px 3px rgba(255, 255, 255, 0);
         }
         #projects .project.opened .project-video{
-            transform: translate(-50%, -50%) !important;
-            position: absolute;
             z-index: 5;
             width: 100%;
-            height: auto;
+            height: 100%;
         }
 }
