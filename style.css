@@ -159,20 +159,19 @@ a:hover .line4{
     /* Burger */
 #navigation .burger{
     position: fixed;
-    display: none;
-    top: 3vh;
+    display: flex;
+    top: 4vh;
     right: 0;
-    margin: 1.7rem;
-    width: 30px;
-    height: 30px;
+    width: 4vh;
+    height: 4vh;
     transform: translate(-50%, -50%);
     z-index: 1000;
 }
 #navigation .burger div{
-    width: 25px;
-    height: 4px;
+    width: 4vh;
+    height: 0.5vh;
     background-color: #fff;
-    margin: 4px auto;
+    margin: 0.7vh auto;
     transition: .2s;
 }
 #navigation.sticky .burger div{
