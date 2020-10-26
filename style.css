@@ -159,7 +159,7 @@ a:hover .line4{
     /* Burger */
 #navigation .burger{
     position: fixed;
-    display: flex;
+    display: none;
     top: 4vh;
     right: 0;
     width: 4vh;
