@@ -848,7 +848,7 @@ footer p{
     #projects{
         padding-top: 7vh;
         width: 100%;
-        height: fit-content;
+        height: 100vh;
         overflow: hidden;
         position: relative;
         background-color: #fff;
@@ -858,7 +858,7 @@ footer p{
         margin: 6rem auto;
         width: 100%;
         max-width: 80vw;
-        height: fit-content;
+        height: 90%;
         animation: comein 1.5s ease-in-out;
     }
     #projects .allcontent .backgroun-zoom.opened{
@@ -876,7 +876,7 @@ footer p{
         right: 0;
         top: 0;
         width: fit-content;
-        height: fit-content;
+        height: auto;
         transition: .2s;
         cursor: pointer;
         box-shadow: -2px 0 3px rgba(0, 0, 0, 0.3)
@@ -910,7 +910,7 @@ footer p{
         transform: rotate(-1deg);
     }
     #projects .project .project-video{
-        height: 60vh;
+        height: auto;
         width: 55vw;
         border: 2px solid #fff;
     }
@@ -918,17 +918,18 @@ footer p{
         position: absolute;
         z-index: 4;
         top: 0%;
-        left: 50%;
-        height: 60vh;
-        width: 100%;
-        transform: rotate(0) translate(-50%, -50%);
+        left: 10%;
+        height: fit-content;
+        width: 60vw;
+        transform: rotate(0) translate(0%, 0%);
         box-shadow: 0 0 7px 3px rgba(255, 255, 255, 0.719);
     }
     #projects .project.opened .project-video{
-        /* transform: translate(-50%, -50%); */
+        transform: translate(0%, 0%);
         position: absolute;
         z-index: 5;
-        width: 100%;
+        width: 60vw;
+        height: auto;
     }
 
 }
