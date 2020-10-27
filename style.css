@@ -256,7 +256,7 @@ a:hover .line4{
     flex: 1;
     border: 2px solid #000;
     overflow: hidden;
-    font-size: 2rem;
+    font-size: 1.7rem;
     transition: .4s ease-in-out;
     background-repeat: no-repeat;
     background-size: auto;
@@ -333,7 +333,7 @@ a:hover .line4{
     position: absolute;
     top: 50%;
     left: 50%;
-    font-size: 2rem;
+    font-size: 1.5rem;
     min-width: 92%;
     max-width: 30rem;
     z-index: 11;
@@ -342,6 +342,7 @@ a:hover .line4{
 }
 
 #skills .skills .skills-list .programing-languages{
+    margin-right: 1rem;
     text-align: right;
     line-height: 5rem;
     font-weight: bolder;
@@ -671,7 +672,7 @@ footer p{
         font-size: 3.2rem;
     }
     #aboutme .aboutme .slide{
-        font-size: 2.8rem;
+        font-size: 2.5rem;
     }
 }
 @media screen and (max-width: 768px) {
@@ -796,7 +797,7 @@ footer p{
     }
     /* ABOUT ME */
     #aboutme .aboutme .slide{
-        font-size: 2.5rem;
+        font-size: 2.3rem;
     }
     
 }
@@ -806,7 +807,7 @@ footer p{
     }
     /* ABOUT ME */
     #aboutme .aboutme .slide{
-        font-size: 2.3rem;
+        font-size: 2rem;
     }
     /* CONTACT */
     #contact .contact .contactinfo .info li{
@@ -823,7 +824,7 @@ footer p{
 @media screen and (max-width: 320px) {
     /* ABOUT ME */
     #aboutme .aboutme .slide{
-        font-size: 1.6rem;
+        font-size: 1.3rem;
     }
     /* CONTACT */
     #contact .contact .contactinfo .info li{
