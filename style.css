@@ -834,6 +834,8 @@ footer p{
         width: 90%;       
     }
 }
+
+
 @media screen and (orientation: landscape){
     /* ABOUT ME */
     #aboutme .aboutme{
@@ -933,7 +935,17 @@ footer p{
     }
 
 }
+@media screen and (max-width: 768px) and (orientation: landscape){
+    /* ABOUT ME */
+    #aboutme .aboutme h4{
+        font-size: 2.2rem;
+    }
+    #aboutme .aboutme .slide{
+        font-size: 1.5rem;
+    }
+}
 @media screen and (max-width: 768px) and (orientation: portrait){
+    
         /* PROJECTS */
         #projects .allcontent .project.closed:nth-child(1):hover{
             transform: rotate(0);
